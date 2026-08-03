@@ -1,0 +1,7 @@
+row pointer:
+0 2 4 7 9 10 
+column index:
+1 2 0 3 0 3 4 1 2 2 
+source Vertex:
+0
+Execution time: 2 ms
