@@ -1,3 +1,7 @@
-2 2
-58 64 
-139 154 
+Algorithm: GEMM Simple
+Result Matrix: 
+Execution time : 69.299 seconds
+
+Algorithm: GEMM Blocked
+Result Matrix: 
+Execution time : 54.992 seconds

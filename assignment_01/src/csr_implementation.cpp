@@ -10,7 +10,7 @@ int main() {
   clock_t start, end;
   start = clock();
 
-    bool isWeighted = false;
+    bool isWeighted = true;
 
     ifstream input_file("input.txt");
     ofstream output_file("output.txt");
