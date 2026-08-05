@@ -8,7 +8,7 @@ using namespace std;
 
 void runGEMM(const string &inputFile, const string &outputFile)
 {
-    int bs = 10;
+    int bs = 12;
     clock_t start1 , end1,start2 , end2;
   ifstream matrix_file(inputFile);
   if (!matrix_file.is_open()) { 

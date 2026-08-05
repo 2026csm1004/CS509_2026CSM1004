@@ -1,9 +1,7 @@
-row pointer:
-0 2 3 5 6 6 
-column index:
-1 2 3 1 3 4 
-weight:
-4 1 1 2 5 3 
-source Vertex:
-0
-Execution time: 3 ms
+Algorithm: GEMM Simple
+Result Matrix: 
+Execution time : 41.996 seconds
+
+Algorithm: GEMM Blocked
+Result Matrix: 
+Execution time : 40.597 seconds
