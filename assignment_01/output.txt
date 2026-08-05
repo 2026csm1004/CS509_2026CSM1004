@@ -6,4 +6,4 @@ weight:
 4 1 1 2 5 3 
 source Vertex:
 0
-Execution time: 2 ms
+Execution time: 3 ms

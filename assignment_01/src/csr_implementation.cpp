@@ -6,18 +6,19 @@
 
 using namespace std;
 
-int main() {
-  clock_t start, end;
-  start = clock();
+void runCSR(const string &inputFile, const string &outputFile)
+{
+    clock_t start, end;
+    start = clock();
 
     bool isWeighted = true;
 
-    ifstream input_file("input.txt");
-    ofstream output_file("output.txt");
+    ifstream input_file(inputFile);
+    ofstream output_file(outputFile);
 
     if (!input_file) {
         cout << "error while opening input file!" << endl;
-        return 1;
+        return ;
     }
 
     int V, E;
@@ -82,5 +83,5 @@ int main() {
     input_file.close();
     output_file.close();
 
-    return 0;
+    return ;
 }

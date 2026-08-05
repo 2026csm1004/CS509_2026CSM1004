@@ -1,3 +1,4 @@
+#include "gemm.h"
 #include<iostream>
 #include<fstream>
 #include<vector>
@@ -5,13 +6,14 @@
 #include<algorithm>
 using namespace std;
 
-int main (){
+void runGEMM(const string &inputFile, const string &outputFile)
+{
     int bs = 10;
     clock_t start1 , end1,start2 , end2;
-  ifstream matrix_file("input_matrix.txt");
+  ifstream matrix_file(inputFile);
   if (!matrix_file.is_open()) { 
     cout << "Error opening file." << endl;
-    return 1;
+    return ;
   }
 
   int r1, c1, c2;
@@ -77,10 +79,10 @@ vector<vector<int>> C(r1, vector<int>(c2, 0));
 end2 = clock();
 double time_taken2 = double(end2 - start2) / CLOCKS_PER_SEC;
 
-    ofstream output_file("output_matrix.txt");
+    ofstream output_file(outputFile);
     if (!output_file.is_open()) {
         cout << "Error opening output file." << endl;
-        return 1;
+        return ;
     }
     output_file << "Algorithm: GEMM Simple" << endl<<"Result Matrix: " << endl;
 //     output_file << r1 << " " << c2 << endl;
@@ -108,5 +110,5 @@ output_file << endl;
     matrix_file.close();
     output_file.close();
 
-    return 0;
+    return ;
 }
