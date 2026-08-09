@@ -1,5 +1,5 @@
 #include "bellman_ford_helper.h"
-#include <ctime>
+#include <chrono>
 
 using namespace std;
 
@@ -12,7 +12,7 @@ void bellmanFordCSR(
     ofstream& output_file
 )
 {
-    clock_t start , end;
+    
     const int INF = 1000000000;
 
     vector<int> distance(V, INF);
@@ -20,7 +20,7 @@ void bellmanFordCSR(
     distance[source] = 0;
 
 
-      start = clock();
+     auto start = chrono::high_resolution_clock::now();
     for(int iteration = 0; iteration < V - 1; iteration++)
     {
         bool updated = false;
@@ -53,9 +53,11 @@ void bellmanFordCSR(
             break;
     }
 
-    end = clock();
-    double time_taken = double(end - start) / CLOCKS_PER_SEC;
-    double time_in_ms = time_taken * 1000;
+    auto end = chrono::high_resolution_clock::now();
+      double executionTime =
+        chrono::duration<double, milli>(
+            end - start
+        ).count();
 
 
     bool negative_cycle = false;
@@ -114,5 +116,5 @@ void bellmanFordCSR(
         output_file << "\n";
     }
     output_file<<"Negative cycle : none\n";   
-        output_file << "Time taken : " << time_in_ms << " ms\n";  
+        output_file << "Time taken : " << executionTime << " ms\n";  
 }
