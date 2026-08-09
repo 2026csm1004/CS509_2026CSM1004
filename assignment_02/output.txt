@@ -1,0 +1,4 @@
+Algorithm: Bellman-Ford
+Source Vertex: 0
+
+Negative cycle : true.

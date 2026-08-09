@@ -7,6 +7,10 @@ using namespace std;
 int main()
 {
     int algo, test;
+    int V, source;
+    vector<int> row_ptr;
+    vector<int> col_idx;
+    vector<int> values;
 
     cout << "1. GEMM\n";
     cout << "2. CSR\n";
@@ -31,7 +35,16 @@ int main()
     if(algo == 1)
         runGEMM(inputFile, outputFile);
     else if(algo == 2)
-        runCSR(inputFile, outputFile);
+        // runCSR(inputFile, outputFile);
+        runCSR(
+    inputFile,
+    outputFile,
+    row_ptr,
+    col_idx,
+    values,
+    V,
+    source
+);
     else
         cout << "Invalid Choice\n";
 
