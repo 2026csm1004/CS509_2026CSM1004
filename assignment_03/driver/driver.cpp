@@ -23,7 +23,7 @@ int main()
     }
 
     cout << "\nEnter number of vertices for test case:\n";
-    cout << "Available test cases: 10, 100, 500, 1000, 2000\n";
+    cout << "Available test cases: 10, 100, 10000, 50000, 100000\n";
     cout << "Enter: ";
     cin >> test;
 

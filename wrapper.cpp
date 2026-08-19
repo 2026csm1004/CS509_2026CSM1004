@@ -12,6 +12,9 @@ void run_assignment_02()
 {
     system("cd /d .\\assignment_02 && shortest_path.exe");
 }
+void run_assignment_03(){
+    system("cd /d .\\assignment_03 && mst.exe");
+}
 
 int main()
 {
@@ -19,6 +22,7 @@ int main()
 
     cout << "Press 1 for Assignment 1\n";
     cout << "Press 2 for Assignment 2\n";
+    cout<< "Press 3 for Assignment 3\n";
     cout << "Enter choice: ";
 
     cin >> choice;
@@ -30,6 +34,9 @@ int main()
     else if(choice == 2)
     {
         run_assignment_02();
+    }
+    else if(choice == 3){
+        run_assignment_03();
     }
     else
     {

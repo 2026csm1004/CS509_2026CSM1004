@@ -73,7 +73,7 @@ void bellmanFordCSR(
         {
             int v = col_idx[i];
             int weight = values[i];
-
+ 
             if(distance[u] + weight < distance[v])
             {
                 negative_cycle = true;
