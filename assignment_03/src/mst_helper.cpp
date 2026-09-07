@@ -48,7 +48,6 @@ void kruskalMST(
             int v = col_idx[i];
             int weight = values[i];
 
-
             if(u < v)
             {
                 edges.push_back({u, v, weight});

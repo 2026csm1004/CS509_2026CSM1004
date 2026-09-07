@@ -12,11 +12,11 @@ void bellmanFordCSR(
     ofstream& output_file
 )
 {
-    
+    // create the infinity distance for all vertex
     const int INF = 1000000000;
-
+// create the array of v element and set each as infinity distance
     vector<int> distance(V, INF);
-
+// the sourse is created by the csr and then its passed to the bellam ford
     distance[source] = 0;
 
 
@@ -24,14 +24,14 @@ void bellmanFordCSR(
     for(int iteration = 0; iteration < V - 1; iteration++)
     {
         bool updated = false;
-
+//to all elemetn in row ptr 
         for(int u = 0; u < V; u++)
         {
             // Vertex u cannot help if it is unreachable
             if(distance[u] == INF)
                 continue;
 
-            // Traverse all outgoing edges of u
+            // // each  v in  row ptr will check for all its neighbour in col ptr 
             for(int i = row_ptr[u];
                 i < row_ptr[u + 1];
                 i++)
@@ -52,14 +52,14 @@ void bellmanFordCSR(
         if(!updated)
             break;
     }
-
+//
     auto end = chrono::high_resolution_clock::now();
       double executionTime =
         chrono::duration<double, milli>(
             end - start
         ).count();
 
-
+/// thi section will runalgo one moretime and will try to relax if any thing happen it will create negative cycle 
     bool negative_cycle = false;
 
     for(int u = 0; u < V; u++)

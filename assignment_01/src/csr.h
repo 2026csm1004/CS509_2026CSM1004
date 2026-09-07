@@ -14,7 +14,8 @@ void runCSR(
     vector<int>& col_idx,
     vector<int>& values,
     int& V,
-    int& source
+    int& source,
+    bool isWeighted = true
 );
 
 #endif

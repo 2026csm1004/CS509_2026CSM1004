@@ -5,7 +5,7 @@ using namespace std;
 
 void run_assignment_01()
 {
-    system("cd /d .\\assignment_01 && driver.exe");
+    system("cd /d .\\assignment_01 && csr.exe");
 }
 
 void run_assignment_02()
@@ -15,6 +15,9 @@ void run_assignment_02()
 void run_assignment_03(){
     system("cd /d .\\assignment_03 && mst.exe");
 }
+void run_assignment_04(){
+    system("cd /d .\\assignment_04 && assignment_04.exe");
+}
 
 int main()
 {
@@ -23,6 +26,7 @@ int main()
     cout << "Press 1 for Assignment 1\n";
     cout << "Press 2 for Assignment 2\n";
     cout<< "Press 3 for Assignment 3\n";
+    cout<< "Press 4 for Assignment 4\n";
     cout << "Enter choice: ";
 
     cin >> choice;
@@ -34,6 +38,9 @@ int main()
     else if(choice == 2)
     {
         run_assignment_02();
+    }
+    else if(choice == 4){
+        run_assignment_04();
     }
     else if(choice == 3){
         run_assignment_03();

@@ -16,14 +16,15 @@ void runCSR(
     vector<int>& col_idx,
     vector<int>& values,
     int& V,
-    int& source
+    int& source,
+    bool isWeighted
 )
 {
     clock_t start, end;
 
     start = clock();
 
-    bool isWeighted = true;
+    // bool isWeighted = true;
 
     ifstream input_file(inputFile);
     ofstream output_file(outputFile);
@@ -88,9 +89,7 @@ void runCSR(
     input_file >> temp;     // SOURCE
     input_file >> source;
 
-    // ---------------------------------------
-    // Write CSR representation
-    // ---------------------------------------
+
 
     output_file << "row pointer:\n";
 

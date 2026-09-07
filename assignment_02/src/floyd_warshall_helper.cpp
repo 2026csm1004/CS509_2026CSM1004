@@ -22,9 +22,6 @@ void floydWarshall(
         return;
     }
 
-    // -----------------------------------------
-    // Read number of vertices
-    // -----------------------------------------
 
     int V;
 
@@ -34,9 +31,7 @@ void floydWarshall(
     string line;
     getline(input_file, line);
 
-    // -----------------------------------------
-    // Read dense matrix
-    // -----------------------------------------
+ 
 
     const int INF = 1000000000;
 
@@ -70,9 +65,7 @@ void floydWarshall(
 
     input_file.close();
 
-    // -----------------------------------------
-    // Floyd-Warshall algorithm
-    // -----------------------------------------
+
 
     auto start = chrono::high_resolution_clock::now();
 
@@ -109,9 +102,6 @@ void floydWarshall(
             end - start
         ).count();
 
-    // -----------------------------------------
-    // Detect negative-weight cycle
-    // -----------------------------------------
 
     bool negativeCycle = false;
 
@@ -124,48 +114,6 @@ void floydWarshall(
         }
     }
 
-    // -----------------------------------------
-    // Write output
-    // -----------------------------------------
-
-//     outputFile << "Algorithm: Floyd-Warshall\n";
-   
-
-//     outputFile << "Distance matrix:\n";
-
-//     for(int i = 0; i < V; i++)
-//     {
-//         for(int j = 0; j < V; j++)
-//         {
-//             if(distance[i][j] == INF)
-//             {
-//                 outputFile << "INF";
-//             }
-//             else
-//             {
-//                 outputFile << distance[i][j];
-//             }
-
-//             if(j < V - 1)
-//                 outputFile << " ";
-//         }
-
-//         outputFile << "\n";
-//     }
-
-//     if(negativeCycle)
-//     {
-//         outputFile << "Negative cycle: detected\n";
-//     }
-//     else
-//     {
-//         outputFile << "Negative cycle: none\n";
-//     }
-
-//     outputFile << "Execution time: "
-//                << executionTime
-//                << " ms\n";
-// }
 outputFile << "Algorithm: Floyd-Warshall\n";
 
 if(negativeCycle)
